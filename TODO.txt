@@ -1,0 +1,5 @@
+# TODO
+
+* Add extensions
+* Add output file
+* Add threading
