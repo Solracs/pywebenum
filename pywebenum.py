@@ -3,12 +3,14 @@
 import requests
 import argparse
 import sys
+#import threading
 
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-u', type = str, required = True, help = "Target's url")
     parser.add_argument('-w', type = str, required = True, help = "Wordlist")
+    #parser.add_argument('-t', type = int, required = True, help = "Number of threads")
 
     args = parser.parse_args()
 
