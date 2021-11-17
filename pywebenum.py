@@ -17,6 +17,7 @@ if __name__ == '__main__':
     if args.u and args.w:
         url = args.u
         path = args.w
+        opened = []
     else:
         print("Incorrect input")
         print("python3 pywebnum -u <url> -w <path to wordlist>")
@@ -30,3 +31,4 @@ if __name__ == '__main__':
             r = requests.get(urlextended)
             if r.status_code == 200:
                 print(urlextended, " -> "+str(r.status_code))
+                opened.append(urlextended)
