@@ -24,6 +24,9 @@ if __name__ == '__main__':
 
     with open(path, 'r') as wordlist:
         for i in wordlist:
-            r = requests.get(url+i)
+            if url[-1] != '/':
+                url = url + '/'
+            urlextended = url + i
+            r = requests.get(urlextended)
             if r.status_code == 200:
-                print(url+i, "status: "+str(r.status_code))
+                print(urlextended, " -> "+str(r.status_code))
