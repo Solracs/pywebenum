@@ -1,5 +1,0 @@
-# TODO
-
-* Add extensions
-* DONE: ~Add output file -> use var opened~
-* Add threading

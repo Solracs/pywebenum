@@ -38,7 +38,9 @@ if __name__ == '__main__':
             urlextended = url + ext
             r = requests.get(urlextended)
 
-            if r.status_code == 200:
+            if r.status_code != 404:
+                if r.status_code in range(300,400):
+                    print(urlextended, " -> "+str(r.status_code)+"\t==> "+str(r.url))
                 print(urlextended, " -> "+str(r.status_code))
                 opened.append(urlextended)
 
